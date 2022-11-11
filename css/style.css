@@ -12,6 +12,8 @@
   --bcg-team-color: #f5f4fa;
   --icon-main-color: #afb1b8;
   --icon-bcg-color: rgba(255, 255, 255, 0.1);
+  --bcg-design-color: rgba(47, 48, 58, 0.8);
+  --timing-function-duration: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -69,7 +71,17 @@ svg {
 .current-link {
   color: var(--logo-main-color);
 }
-
+.current-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -4%;
+  border-radius: 2px;
+  display: block;
+  width: 108%;
+  height: 4px;
+  background-color: var(--logo-main-color);
+}
 .title {
   font-size: 36px;
   line-height: 1.17;
@@ -82,7 +94,7 @@ svg {
   cursor: pointer;
 }
 
-/* --------------------------------HEADER ----------------------*/
+/* -----------------------------------HEADER --------------------------*/
 .header {
   border-bottom: 1px solid #eee;
 }
@@ -113,12 +125,14 @@ svg {
 }
 
 .header__menu-link {
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color var(--timing-function-duration);
 }
 
 .header__menu-link:hover,
@@ -267,6 +281,18 @@ svg {
 
 .design__title {
   margin-bottom: 50px;
+}
+.design__desc {
+  position: absolute;
+}
+.design__text {
+  text-align: center;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 27px 0;
+  background-color: var(--bcg-design-color);
+  color: var(--text-hover-color);
 }
 /* --------------------------------TEAM ----------------------*/
 .team {
