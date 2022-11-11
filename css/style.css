@@ -454,6 +454,7 @@ svg {
   gap: 30px;
 }
 .portfolio__card-link {
+  position: relative;
   display: block;
   transition: box-shadow var(--timing-function-duration);
 }
@@ -482,6 +483,13 @@ svg {
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
+}
+.portfolio__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 /* --------------------------------FOOTER ----------------------*/
 .footer {
