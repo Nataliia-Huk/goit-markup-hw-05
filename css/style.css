@@ -238,6 +238,8 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color: var(--bcg-team-color);
 }
 .advantages__icon {
