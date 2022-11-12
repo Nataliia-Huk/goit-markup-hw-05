@@ -614,7 +614,7 @@ svg {
   top: 0;
   left: 0;
   display: block;
-  width: 100%;
+  width: 120%;
   height: 4px;
   background-color: var(--text-main-color);
   transform: rotate(45deg);
@@ -626,9 +626,9 @@ svg {
   bottom: 0;
   left: 0;
   display: block;
-  width: 100%;
+  width: 120%;
   height: 4px;
   background-color: var(--text-main-color);
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translateX(2px) translateY(2px);
   transform-origin: bottom left;
 }
