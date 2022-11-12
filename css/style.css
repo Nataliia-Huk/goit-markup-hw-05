@@ -235,7 +235,9 @@ svg {
 }
 .advantages__div {
   margin-bottom: 30px;
-  padding: 25px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--bcg-team-color);
 }
 .advantages__icon {
@@ -366,10 +368,6 @@ svg {
 .team__icons-link:hover,
 .team__icons-link:focus {
   background-color: var(--logo-main-color);
-  width: 44px;
-  height: 44px;
-  padding: 12px;
-  border-radius: 50%;
 }
 /* --------------------------------CLIENTS ----------------------*/
 .clients__title {
@@ -589,6 +587,7 @@ svg {
   background-color: var(--backdrop-color);
   backdrop-filter: blur(3px);
   z-index: var(--modal-idx);
+  transition: opacity var(--timing-function-duration);
 }
 .modal {
   position: absolute;
@@ -598,6 +597,7 @@ svg {
   width: 550px;
   min-height: 550px;
   background-color: var(--bcg-team-color);
+  transition: opacity var(--timing-function-duration);
 }
 .modal__button {
   position: absolute;
@@ -605,9 +605,9 @@ svg {
   right: 10px;
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
-.modal__icon {
-}
+
 .modal__button::before {
   content: '';
   position: absolute;
@@ -631,4 +631,9 @@ svg {
   background-color: var(--text-main-color);
   transform: rotate(-45deg) translateX(2px) translateY(2px);
   transform-origin: bottom left;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
