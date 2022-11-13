@@ -150,10 +150,7 @@ svg {
   margin-left: auto;
   gap: 30px;
 }
-.header__contacts-item {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
+
 .header__icon {
   margin-right: 10px;
   transition: fill var(--timing-function-duration);
@@ -240,8 +237,7 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  min-height: 120px;
   background-color: var(--bcg-team-color);
 }
 .advantages__icon {
@@ -307,6 +303,7 @@ svg {
   background-color: var(--bcg-design-color);
 }
 .design__text {
+  font-size: 700;
   text-align: center;
   line-height: 1.14;
   letter-spacing: 0.03em;
